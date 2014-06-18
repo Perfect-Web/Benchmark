@@ -199,7 +199,22 @@ EOR;
 			}
 			else{
 
-				$table = new Zend\Text\Table\Table();
+				$table = new Zend\Text\Table\Table(array(
+					                                   'columnWidths' => array(
+						                                   40,
+						                                   2,
+						                                   2,
+						                                   20,
+						                                   20,
+						                                   20,
+						                                   20,
+						                                   2,
+						                                   20,
+						                                   20,
+						                                   20,
+						                                   20
+					                                   )
+				                                   ));
 
 				if (count($this->sections) == 1) {
 					$table->appendRow('No Data');
@@ -218,7 +233,7 @@ EOR;
 						                  'Memory',
 						                  '   ',
 						                  '   ',
-						                  '   ',
+						                  '   '
 					                  ));
 
 					$table->appendRow(array(
@@ -233,7 +248,7 @@ EOR;
 						                  'total',
 						                  'mean',
 						                  'median',
-						                  'deviation',
+						                  'deviation'
 					                  ));
 
 
